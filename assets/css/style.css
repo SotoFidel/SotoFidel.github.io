@@ -32,7 +32,7 @@ body > .content {
     display: flex;
     justify-content: center;
     align-items: center;
-
+    font-size: 8em;
 }
 
 .buttons {
@@ -54,37 +54,37 @@ body > .content {
         position: relative;
     }
 
-    div.button.clicked {
-        color: white !important;
-    }
-
     div.button:hover {
         cursor: pointer;
     }
 
     div.growable {
-        transition: all .5s;
         background-color: white;
         color: black;
         position: fixed;
         padding: 10px;
         min-width: 105px;
+
+        p {
+            margin: 0;
+            font-weight: bolder;
+            font-size: 1em;
+        }
+
     }
 
     div.growable.grown {
-        z-index: 100;
         left: 50% !important;
         top: 30% !important;
         transform: translate(-50%,-30%);
         width: 65vw !important;
         height: 85vh !important;
+
+        p {
+            font-size: 2em;
+        }
+
     }
 
 
-}
-
-@media only screen and (max-width: 768px) {
-    .buttons {
-        flex-direction: column;
-    }
 }
