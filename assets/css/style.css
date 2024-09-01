@@ -48,7 +48,7 @@ body > .content {
         padding: 10px;
         width: 25%;
         text-align: center;
-        background-color: white;
+        background-color: black;
         color: black;
         user-select: none;
         position: relative;
@@ -63,18 +63,28 @@ body > .content {
     }
 
     div.growable {
-        /* transition: all 20s; */
+        transition: all .5s;
+        background-color: white;
+        color: black;
+        position: fixed;
+        padding: 10px;
+        min-width: 105px;
     }
 
     div.growable.grown {
         z-index: 100;
         left: 50% !important;
-        top: 50% !important;
-        transform: translate(-50%,-50%);
-        width: 50vw !important;
-        height: 50vh !important;
-        opacity: 1 !important;
+        top: 30% !important;
+        transform: translate(-50%,-30%);
+        width: 65vw !important;
+        height: 85vh !important;
     }
 
 
+}
+
+@media only screen and (max-width: 768px) {
+    .buttons {
+        flex-direction: column;
+    }
 }
