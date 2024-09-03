@@ -96,6 +96,7 @@ window.onload = () => {
     }
 
     ["resize","scroll","ontouchmove","ontouchend"].forEach(event => {
+        querySelector("#event").innerHTML = "Last event: " + event;
         addEventListener(event,function(){
 
             for(let i of document.querySelectorAll(".buttons div.button")) {
