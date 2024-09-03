@@ -62,8 +62,8 @@ window.onload = () => {
         d.classList.add("growable");
         d.style.width = boundingClientRect.width + 'px';
         d.style.height = boundingClientRect.height + 'px';
-        d.style.left = boundingClientRect.x + 'px';
-        d.style.top = boundingClientRect.y + 'px';
+        d.style.left = boundingClientRect.x + window.scrollX + 'px';
+        d.style.top = boundingClientRect.y + window.scrollY + 'px';
         i.append(d);
 
         i.closest(".button").addEventListener("click",function() {
@@ -105,8 +105,8 @@ window.onload = () => {
                 let boundingClientRect = i.getBoundingClientRect();
                 d.style.width = boundingClientRect.width + 'px';
                 d.style.height = boundingClientRect.height + 'px';
-                d.style.left = boundingClientRect.x + 'px';
-                d.style.top = boundingClientRect.y + 'px';
+                d.style.left = boundingClientRect.x + window.scrollX + 'px';
+                d.style.top = boundingClientRect.y + window.scrollY + 'px';
             }
 
         });
