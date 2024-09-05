@@ -195,4 +195,8 @@ body > .content {
         }
 
     }
+
+    .hero-name {
+        font-size: 8em;
+    }
 }
