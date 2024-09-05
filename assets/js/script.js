@@ -145,7 +145,7 @@ window.onload = () => {
     ["resize","scroll","ontouchmove","ontouchend"].forEach(event => {
         addEventListener(event,function(e){
             
-            document.querySelector("#event").innerHTML = "Last event: " + e.type;
+            // document.querySelector("#event").innerHTML = "Last event: " + e.type;
 
             for(let i of document.querySelectorAll(".buttons div.button")) {
                 let d = i.querySelector('.growable');
