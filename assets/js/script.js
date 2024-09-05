@@ -128,15 +128,14 @@ window.onload = () => {
         d.style.top = boundingClientRect.top + 'px';
         i.append(d);
 
-        i.closest(".button").addEventListener("click", handleGrowableClicked);
+        d.addEventListener("click", handleGrowableClicked);
 
         i.querySelector(".close").addEventListener("click",function(e){
-            e.stopPropagation();
 
             if (d.classList.contains("grown"))
             {
                 d.addEventListener("transitionend",function(){
-                    for(let i of document.querySelectorAll(".button")){
+                    for(let i of document.querySelectorAll(".growable")){
                         i.addEventListener("click",handleGrowableClicked);
                     }
                     d.style.zIndex = '0';
@@ -170,7 +169,7 @@ window.onload = () => {
     });
 
     function handleGrowableClicked(e) {
-        for(let i of document.querySelectorAll(".button")){
+        for(let i of document.querySelectorAll(".growable")){
             i.removeEventListener("click",handleGrowableClicked);
         }
         console.log(e,e.target);
