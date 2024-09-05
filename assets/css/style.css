@@ -1,6 +1,6 @@
 @font-face {
     font-family: Montserrat;
-    src: url(../fonts/static/Montserrat-Regular.ttf);
+    src: url(../fonts/static/Montserrat-Medium.ttf);
 }
 
 html, body {
@@ -29,19 +29,21 @@ body > .content {
     align-items: center;
 
     background: black;
-    color: white;
+    color: whitesmoke;
+
+    overflow: hidden;
     
 }
 
 .hero-name {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 8em;
-    font-weight: bolder;
+    font-size: 11em;
+    font-weight: bold;
     font-style: italic;
     text-align: center;
     margin-bottom: .1em;
+    margin-top: auto;
+    text-shadow: -5px 5px #a7a7a7;
+    color: whitesmoke !important;
 }
 
 .buttons {
@@ -73,14 +75,14 @@ body > .content {
 
     div.growable {
         
-        background-color: white;
+        background-color: whitesmoke;
         color: black;
         position: fixed;
         padding: 10px;
         min-width: 105px;
         overflow: hidden;
 
-        p {
+        p.button-title {
             margin: 0;
             font-weight: bolder;
             font-size: 1em;
@@ -99,10 +101,37 @@ body > .content {
             ul {
                 line-height: 1.35em;
             }
+
+            li {
+                margin-top: .5em;
+                margin-bottom: .5em;
+            }
         }
 
         .info.text {
-            margin-top: 1em;
+            margin-top: .5em;
+
+            hr {
+                border: 2px solid black;
+            }
+
+            h3, span {
+                font-style: italic;
+            }
+
+            h3 {
+                display: inline;
+            }
+
+            h4 {
+                margin-bottom: .5em;
+            }
+
+            p {
+                margin-left: 5px;
+                margin-top: .5em;
+            }
+
         }
 
         .close {
@@ -132,13 +161,13 @@ body > .content {
     div.growable.grown {
 
         left: 50% !important;
-        top: 30% !important;
-        transform: translate(-50%,-30%);
-        width: 50vw !important;
+        top: 50% !important;
+        transform: translate(-50%,-50%);
+        width: 100vw !important;
         height: 85vh !important;
-        overflow-y: scroll;
+        overflow-y: auto;
 
-        p {
+        p.button-title {
             font-size: 2em;
         }
 
@@ -155,4 +184,15 @@ body > .content {
     }
 
 
+}
+
+@media screen and (max-width: 920px) {
+    .buttons {
+        width: 100%;
+
+        .growable.grown {
+            width: 100vw !important;
+        }
+
+    }
 }
