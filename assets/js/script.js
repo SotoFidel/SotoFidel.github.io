@@ -102,7 +102,13 @@ const templateInfo = {
                 `
 };
 
+window.onresize = function() {
+    document.body.style.height = window.innerHeight + 'px';
+}
+
 window.onload = () => {
+
+    window.onresize();
     
     for(let i of document.querySelectorAll(".buttons div.button")) {
 
@@ -144,8 +150,6 @@ window.onload = () => {
 
     ["resize","scroll","ontouchmove","ontouchend"].forEach(event => {
         addEventListener(event,function(e){
-            
-            // document.querySelector("#event").innerHTML = "Last event: " + e.type;
 
             for(let i of document.querySelectorAll(".buttons div.button")) {
                 let d = i.querySelector('.growable');
@@ -156,6 +160,12 @@ window.onload = () => {
                 d.style.top = boundingClientRect.top + 'px';
             }
 
+        });
+    });
+
+    ["gestureend","gesturestart","gesturechange"].forEach(event => {
+        document.addEventListener(event,function(e){
+            e.preventDefault();
         });
     });
 

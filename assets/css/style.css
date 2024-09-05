@@ -10,8 +10,9 @@ html, body {
 }
 
 body {
-    height: 100vh;
     width: 100vw;
+    height: 100vh;
+    overflow-y: hidden;
 }
 
 * {
@@ -30,9 +31,6 @@ body > .content {
 
     background: black;
     color: whitesmoke;
-
-    overflow: hidden;
-    
 }
 
 .hero-name {
@@ -62,10 +60,6 @@ body > .content {
         background-color: black;
         color: black;
         position: relative;
-
-        .content {
-            background-color: red;
-        }
 
     }
 
@@ -137,13 +131,14 @@ body > .content {
         .close {
             position: absolute;
             right: 20px;
-            top: 20px;
+            top: 10px;
 
             button {
                 font-weight: bold;
                 color: black;
                 background:none;
                 border: 2px solid black;
+                font-size: 1.5em;
             }
 
             button:hover {
@@ -163,7 +158,6 @@ body > .content {
         left: 50% !important;
         top: 50% !important;
         transform: translate(-50%,-50%);
-        width: 100vw !important;
         height: 85vh !important;
         overflow-y: auto;
 
@@ -186,17 +180,40 @@ body > .content {
 
 }
 
-@media screen and (max-width: 920px) {
-    .buttons {
-        width: 100%;
-
-        .growable.grown {
-            width: 100vw !important;
-        }
-
+@media screen and (max-width: 920px){
+    
+    @media screen and (min-height: 701px) {
+        .hero-name {
+            font-size: 8em;
+        }        
     }
 
+    .buttons {
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-height: 700px) {
     .hero-name {
-        font-size: 8em;
+        font-size: 4em;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    div.growable.grown {
+        width: 100% !important;
+    }
+}
+
+@media screen and (min-width: 1001px) {
+    div.growable.grown {
+        width: 45% !important;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .buttons div.growable p.button-title {
+        font-size: .8em;
     }
 }
