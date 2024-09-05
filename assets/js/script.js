@@ -121,11 +121,11 @@ window.onload = () => {
                         i.dataset.title+"</p>" +
                         templateInfo[`${i.dataset.title ?? ''}`];
 
-        d.classList.add("growable");
+        d.classList.add("growable","initial");
         d.style.width = boundingClientRect.width + 'px';
         d.style.height = boundingClientRect.height + 'px';
         d.style.left = boundingClientRect.left + 'px';
-        d.style.top = boundingClientRect.top + 'px';
+        d.style.top = (boundingClientRect.top - boundingClientRect.height) + 'px';
         i.append(d);
 
         d.addEventListener("click", handleGrowableClicked);
@@ -178,5 +178,17 @@ window.onload = () => {
         d.style.zIndex = '100';
         d.classList.add("grown");
     }
+
+    setTimeout(function() {
+        for(let i of document.querySelectorAll(".buttons div.button")) {
+            let d = i.querySelector('.growable');
+            let boundingClientRect = i.getBoundingClientRect();
+            d.style.width = boundingClientRect.width + 'px';
+            d.style.height = boundingClientRect.height + 'px';
+            d.style.left = boundingClientRect.left + 'px';
+            d.style.top = boundingClientRect.top + 'px';
+            d.classList.remove("initial");
+        }
+    }, 500);
 
 }
