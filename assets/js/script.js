@@ -189,6 +189,6 @@ window.onload = () => {
             d.style.top = boundingClientRect.top + 'px';
             d.classList.remove("initial");
         }
-    }, 500);
+    }, 200);
 
 }
