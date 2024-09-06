@@ -173,7 +173,6 @@ window.onload = () => {
         for(let i of document.querySelectorAll(".growable")){
             i.removeEventListener("click",handleGrowableClicked);
         }
-        console.log(e,e.target);
         let d = e.target.closest(".growable");
         d.style.transition = 'width 1s,height 1s,transform 1s,left 1s,top 1s';
         d.style.zIndex = '100';
