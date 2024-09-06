@@ -73,6 +73,7 @@ body > .content {
     }
 
     div.growable {
+        touch-action: manipulation;
         background-color: whitesmoke;
         color: black;
         position: fixed;
