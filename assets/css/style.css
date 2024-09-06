@@ -69,11 +69,10 @@ body > .content {
 
     div.growable.initial {
         opacity: 0;
-        transition: opacity 1s;
+        transition: opacity 1s, top 1s;
     }
 
     div.growable {
-        transition: opacity 1s, top 1s;
         background-color: whitesmoke;
         color: black;
         position: fixed;

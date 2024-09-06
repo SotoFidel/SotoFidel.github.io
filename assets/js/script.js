@@ -182,12 +182,15 @@ window.onload = () => {
     setTimeout(function() {
         for(let i of document.querySelectorAll(".buttons div.button")) {
             let d = i.querySelector('.growable');
+            d.addEventListener("transitionend",function(){
+                d.classList.remove("initial");
+            },{once:true});
             let boundingClientRect = i.getBoundingClientRect();
             d.style.width = boundingClientRect.width + 'px';
             d.style.height = boundingClientRect.height + 'px';
             d.style.left = boundingClientRect.left + 'px';
             d.style.top = boundingClientRect.top + 'px';
-            d.classList.remove("initial");
+            d.style.opacity = 1;
         }
     }, 200);
 
