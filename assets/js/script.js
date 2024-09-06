@@ -117,8 +117,8 @@ window.onload = () => {
 
         d.innerHTML = `
                         <div class="info close"><button>X</button></div>
-                        <p class="button-title" style="transition: font-size 1s;">` +
-                        i.dataset.title+"</p>" +
+                        <div class = "button-title" style="width:100%;"><p>`+ 
+                        i.dataset.title+"</p></div>" +
                         templateInfo[`${i.dataset.title ?? ''}`];
 
         d.classList.add("growable","initial");
@@ -134,6 +134,7 @@ window.onload = () => {
 
             if (d.classList.contains("grown"))
             {
+                d.scrollTo(0,0);
                 d.addEventListener("transitionend",function(){
                     for(let i of document.querySelectorAll(".growable")){
                         i.addEventListener("click",handleGrowableClicked);

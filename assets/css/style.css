@@ -80,8 +80,8 @@ body > .content {
         padding: 10px;
         overflow: hidden;
 
-        p.button-title {
-            margin: 0;
+        .button-title {
+            margin: 0px 0px 0px 0px;
             font-weight: bolder;
             font-size: 1em;
         }
@@ -153,6 +153,10 @@ body > .content {
 
         .button-title {
             font-style: italic;
+            transition: font-size 1s;
+            p {
+                margin: 0 !important;
+            }
         }
 
     }
@@ -165,7 +169,8 @@ body > .content {
         height: 85vh !important;
         overflow-y: auto;
 
-        p.button-title {
+        .button-title {
+            margin: 0px 0px 0px 0px;
             font-size: 2em;
         }
 
@@ -198,12 +203,14 @@ body > .content {
 
 }
 
+/* Vertical media queries */
 @media screen and (max-height: 700px) {
     .hero-name {
-        font-size: 4em;
+        font-size: 5em;
     }
 }
 
+/* Horizontal media queries */
 @media screen and (max-width: 1000px) {
     div.growable.grown {
         width: 100% !important;
@@ -217,7 +224,10 @@ body > .content {
 }
 
 @media screen and (max-width: 450px) {
-    .buttons div.growable p.button-title {
-        font-size: .8em;
+    .buttons div.growable {
+        .button-title, .close {
+            font-size: .7em;
+        }
     }
+    
 }
