@@ -18,7 +18,7 @@ window.onload = () => {
 
         d.addEventListener("click", handleGrowableClicked);
 
-        i.querySelector(".close").addEventListener("click",function(e){
+        d.querySelector(".close").addEventListener("click",function(e){
 
             if (d.classList.contains("grown"))
             {
