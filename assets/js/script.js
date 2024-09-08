@@ -8,21 +8,13 @@ window.onload = () => {
     
     for(let i of document.querySelectorAll(".buttons div.button")) {
 
-        let d = document.createElement("div");
+        let d = i.querySelector(".growable");
         let boundingClientRect = i.getBoundingClientRect();
 
-        d.innerHTML = `
-                        <div class="info close"><button>X</button></div>
-                        <div class = "button-title" style="width:100%;"><p>`+ 
-                        i.dataset.title+"</p></div>";
-        d.append(document.querySelector(`#${i.dataset.title}`));
-
-        d.classList.add("growable","initial");
         d.style.width = boundingClientRect.width + 'px';
         d.style.height = boundingClientRect.height + 'px';
         d.style.left = boundingClientRect.left + 'px';
         d.style.top = (boundingClientRect.top - boundingClientRect.height) + 'px';
-        i.append(d);
 
         d.addEventListener("click", handleGrowableClicked);
 
