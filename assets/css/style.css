@@ -47,7 +47,7 @@ body > .content {
 .buttons {
 
     display: flex;
-    width: 50%;
+    width: 75%;
     justify-content: space-evenly;
     min-height: 35px;
 
@@ -55,12 +55,11 @@ body > .content {
         border: none;
         border-radius: 2px;
         padding: 10px;
-        width: 25%;
+        width: 20%;
         text-align: center;
         background-color: black;
         color: black;
         position: relative;
-
     }
 
     div.button:hover {
@@ -187,6 +186,13 @@ body > .content {
     }
 
 
+}
+
+.links {
+    margin-top: 50px;
+    a {
+        color: white;
+    }
 }
 
 @media screen and (max-width: 920px){
