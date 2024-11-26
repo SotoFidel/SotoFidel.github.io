@@ -3,7 +3,7 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Fidel Soto | Software Engineer</title>
-        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="src/css/style.css">
     </head>
     <body>
         <div class="content">
@@ -67,36 +67,44 @@
                             
                             <div><b>Virtual Interview Platform | (C#, JS, AWS)</b></div>
                             <ul>
-                                <li>Led encoding server infrastructure scaling to serve thousands of users nationwide. Integrated EC2 Auto Scaling with CloudWatch and SQS for load monitoring.</li>
-                                <li>Migrated and reconfigured platform from one AWS customer to another after ownership transfer.</li>
-                                <li>Provided effective support and development for both the old and new owners of the platform.</li>
+                                <li>Scaled up encoding server infrastructure to serve tens of thousands of users nationwide with EC2 Auto Scaling with CloudWatch and SQS for message load monitoring.</li>
+                                <li>Refactored frontend to use WebRTC before Adobe Flash discontinuation, making the transition seamless for the end user.</li>
+                                <li>Worked with designers to make visual overhauls to the site and refactor Razor page structure.</li>
+
+                            </ul>
+
+                            <div><b>Construction Billing Portal | (Angular, TS, C#, SQL) </b></div>
+                            <ul>
+                                <li>Developed SPA in Angular, C#, and SQL to make contractor billing processes go paperless and to decrease response times between contractors drastically.</li>
+                                <li>Secured sensitive information by hashing sensitive data and securing the portal's S3 bucket with access control.</li>
                             </ul>
                             
                             <div><b>Sports Club Membership & Management Web App | (PHP, JS, SQL, AWS)</b></div>
                             <ul>
-                                <li>Led app scaling project to handle rapidly increasing user base. Refactored business data schemas and parallelized SMS and email messaging solutions in AWS.</li>
-                                <li>Implemented UI with Google Maps to recommend the nearest available club based on the user's address.</li>
+                                <li>Re-architected infrastructure to handle rapidly increasing user base. Refactored business data schemas. Parallelized SMS and email messaging solutions in AWS.</li>
+                                <li>Implemented custom UI with Google Maps to recommend the nearest available club based on the user's address.</li>
                             </ul>
 
                             <div><b>Data Warehousing Project | (C#, SQL) </b></div>
                             <ul>
-                                <li>Designed & Developed workflow with C# app and SQL backend to parse, preview, and upload CSV/Excel data.</li>
-                                <li>Improved time to gather and upload data by 30% per file with this system.</li>
-                                <li>Integrated new incoming data from multiple sources and formats into the data warehouse.</li>
+                                <li>Designed & Developed robust workflow with C# & SQL to increase data gathering & processing efficiency by 30%.</li>
+                                <li>Integrated logging using Serilog for generation and Seq for remote storage.</li>
+                                <li>Developed SPA in Angular with DevExpress to view warehoused data within pivot grids.</li>
                             </ul>
 
                             <div><b>Economics and Litigation Management Portal | (PHP, JS, AngularJS, SQL)</b></div>
                             <ul>
-                                <li>Automated business processes and made them paperless by integrating them with QuickBooks APIs and SQL.</li>
-                                <li>Dockerized client's environment for our use to further develop and support the portal efficiently.</li>
+                                <li>Automated business processes by integrating them with the  QuickBooks API and SQL.</li>
+                                <li>Dockerized client's PHP/SQL/MongoDB environment to further develop and support the portal with our machines.</li>
                             </ul>
 
                             <div><b>Internal Company Efforts & Impact | (C#, TS, Angular, SQL, AWS)</b></div>
                             <ul>
-                                <li>Mentored newer software developers in understanding frameworks, libraries, concepts, and project structures.</li>
-                                <li>Researched technologies and processes, then created proof of concept projects and presentations to show findings. This helped team leadership determine the feasibility and effectiveness of projects.</li>
-                                <li>Developed internal reporting tools in C# and SQL to send PDFs of compiled info via Email to company management.</li>
-                                <li>Modernized client Angular and C# codebases. Added CICD, performed migrations to newer servers, and updated code dependencies.</li>
+                                <li>Collaborated with teams to develop Angular SPAs with C# and SQL backends for businesses. Modernized older codebases by integrating with AWS CI/CD pipelines, migrating from old servers, and updating dependencies.</li>
+                                <li>Developed reporting tools in C# and SQL to send PDFs of compiled info via Email to management.</li>
+                                <li>Mentored newer software developers in understanding frameworks, libraries, and structure of projects.</li>
+                                <li>Performed R&D to aid management determine feasibility, cost and effectiveness of projects.</li>
+
                             </ul>
 
                             <hr/>
@@ -188,6 +196,6 @@
             <!-- <div style="position: absolute; top: 0;" id="event">
             </div> -->
         </div>
-        <script src="assets/js/script.js"></script>
+        <script src="src/js/script.js"></script>
     </body>
 </html>
