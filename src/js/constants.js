@@ -31,6 +31,8 @@ export const AlphaNumericValues = new Map([
     ['+', 40], ['-', 41], ['.', 42], ['/', 43], [':', 44],
 ]);
 // export const CharacterCapacities = new Map<[number,ErrorCorrectionLevel],QrVersionEntry>([
+// TODO: Add fields to the rest of the entries. Only 1 entry has all the values
+//       it actually needs so I can set up the rest of the code logic
 export const CharacterCapacities = [
     { version: 1, errorCorrectionLevel: ErrorCorrectionLevel.L, numericMode: 41, alphanumericMode: 25, byteMode: 17, kanjiMode: 10, totalNumberOfCodeWords: 19, ecCodeWordsPerBlock: 7, group1NumOfBlocks: 1, group1CodeWordsPerBlock: 19 },
     { version: 1, errorCorrectionLevel: ErrorCorrectionLevel.M, numericMode: 34, alphanumericMode: 20, byteMode: 14, kanjiMode: 8 },
